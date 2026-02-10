@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lonix Watch | Premium Streaming</title>
+    <style>
+        :root {
+            --primary-color: #00f2ff; /* Lysande blå accent */
+            --bg-dark: #0a0a0c;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --text-main: #ffffff;
+            --text-dim: #a0a0a0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Modern Navigering */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background: rgba(10, 10, 12, 0.8);
+            backdrop-filter: blur(10px); /* Glas-effekt */
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            background: linear-gradient(90deg, #fff, var(--primary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Rutnätet för videor */
+        .container {
+            max-width: 1400px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        /* Moderna Videokort */
+        .video-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .video-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0, 242, 255, 0.15);
+            border-color: var(--primary-color);
+        }
+
+        video {
+            width: 100%;
+            display: block;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            background: #000;
+        }
+
+        .video-info {
+            padding: 20px;
+        }
+
+        .video-info h2 {
+            margin: 0 0 10px 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .video-info p {
+            margin: 0;
+            color: var(--text-dim);
+            font-size: 0.9rem;
+        }
+
+        /* En liten "Live"-indikator för extra stil */
+        .badge {
+            display: inline-block;
+            background: var(--primary-color);
+            color: #000;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">LONIX WATCH</div>
+        <nav>
+            <span style="color: var(--primary-color); cursor: pointer;">Utforska</span>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="video-grid">
+            
+            <div class="video-card">
+                <video controls>
+                    <source src="video1.mp4" type="video/mp4">
+                </video>
+                <div class="video-info">
+                    <span class="badge">Nyhet</span>
+                    <h2>Cyberpunk Äventyret</h2>
+                    <p>Följ med på en resa genom den neonbelysta staden i 4K.</p>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <video controls>
+                    <source src="video2.mp4" type="video/mp4">
+                </video>
+                <div class="video-info">
+                    <h2>Kodning i Framtiden</h2>
+                    <p>Hur vi bygger webbsidor år 2026 med AI och modern CSS.</p>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <video controls poster="placeholder.jpg">
+                    <source src="video3.mp4" type="video/mp4">
+                </video>
+                <div class="video-info">
+                    <h2>Lonix Watch Update</h2>
+                    <p>De senaste funktionerna i vår streaming-plattform.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+                      </html>
